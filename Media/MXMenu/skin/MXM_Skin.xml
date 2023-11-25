@@ -1,0 +1,163 @@
+<Skin name="C-XBox Tool">
+	<Version>1.0</Version>
+	<Information>
+		<Author>C-XBox Tool</Author>
+		<SkinVersion>0.1 Beta</SkinVersion>
+	</Information>		
+	<Resource Type="Image" Name="Launch">
+		<File>WAIT.PNG</File>
+	</Resource>	
+	<Resource Type="Image" Name="aTitle">
+		<File>Cxboxtool.PNG</File>
+	</Resource>		
+	<Resource Type="Image" Name="MenuBack">
+		<File>SCREEN.PNG</File>
+	</Resource>	
+	<Resource Type="Image" Name="ScreenShot">
+		<EntryNamed>Media</EntryNamed>
+	</Resource>
+	<Resource Type="Font" Name="8PinMatrix">
+		<File>8PinMatrix.xpr</File>
+	</Resource>					
+	<Resource Type="Font" Name="Fontn">
+		<File>fontn.xpr</File>
+	</Resource>
+	<Resource Type="Font" Name="Fontb">
+		<File>fontb.xpr</File>
+	</Resource>
+	<Resource Type="Sound" Name="MenuDown">
+		<File>menu.wav</File>
+	</Resource>
+	<Resource Type="Sound" Name="MenuUp">
+		<File>menu.wav</File>
+	</Resource>
+	<Resource Type="Sound" Name="MenuLaunch">
+		<File>launch.wav</File>
+	</Resource>
+	<Music>
+		<Dir>MUSIC</Dir>
+		<PlayGlobal>false</PlayGlobal>
+	</Music>
+	<Delays>
+		<Load>5000</Load>
+		<Saver>300</Saver>
+		<Title>5000</Title>
+	</Delays>
+	<Layout Screen="Title">							
+		<LayoutElement Type="Image" Source="aTitle">
+			<Pos t="0" l="0" w="640" h="480" />
+			<Scale x="true" y="true" />
+			<Proportional>false</Proportional>
+			<Timer Type="delay">1725</Timer>
+		</LayoutElement>		
+	</Layout>
+	<Layout Screen="Menu">		
+		<LayoutElement Type="Image" Source="MenuBack">
+			<Pos t="0" l="0" w="640" h="480" />
+			<Scale x="true" y="true" />
+			<Proportional>false</Proportional>
+			<Timer Type="delay">1725</Timer>
+		</LayoutElement>				
+		<LayoutElement Type="Image" Source="ScreenShot">
+			<Pos t="115" l="328" w="269" h="200" />			
+			<Scale x="false" y="false" />
+			<Justify x="center" y="center" />
+			<Proportional>true</Proportional>
+			<Sound Enable="true" SuspendMusic="true" />
+			<Timer Type="delay">1725</Timer>
+		</LayoutElement>						
+		
+		<LayoutElement Type="Menu" Source="MXM">
+			<Timer Type="delay">1725</Timer>			
+			<Pos t="95" l="75" w="232" h="240" />
+			<Scale x="false" y="true" />
+			<SelPos>1</SelPos>
+			<NumItems>5</NumItems>
+			<Thumbnails Align="left" FolderImg="Folder" PassImg="Lock">false</Thumbnails>
+			<MinimumHeight>0</MinimumHeight>
+			<DrawSecondary>True</DrawSecondary>
+			<ScrollFactor>8</ScrollFactor>
+			<Primary Source="Title">
+			 <Font>MenuTitleFont</Font>
+			 <OffsetY>0</OffsetY>
+			 <JustifyX>left</JustifyX>
+			</Primary>
+			<Secondary Source="Descr">
+			 <Font>MenuDescrFont</Font>
+			 <OffsetY>0</OffsetY>
+			 <JustifyX>Center</JustifyX>
+			</Secondary>
+			<Selection>
+			 	<TextColor>0xFFa0FFa0</TextColor>
+			 	<ShadowColor>0xFF000000</ShadowColor>
+			 	<DoGlow>True</DoGlow>
+ 			 	<Modifier Type="Throb" Target="TextColor">
+			 		<Green Enable="true" Min="150" Max="255" Period="600" />
+			 		<Red Enable="true" Min="100" Max="155" Period="600" />
+			 		<Blue Enable="true" Min="100" Max="155" Period="600" />
+			 	</Modifier>
+			</Selection>
+			<UnSelItem>
+			 	<TextColor>0xFFa0a0a0</TextColor>
+			 	<ShadowColor>0xFF000000</ShadowColor>
+			 	<DoGlow>False</DoGlow>			 	
+			</UnSelItem>
+		</LayoutElement>		
+	</Layout>
+	<Layout Screen="Load">
+		<LayoutElement Type="Image" Source="Launch">
+			<Pos t="0" l="0" w="640" h="480" />
+			<Scale x="true" y="true" />
+			<Proportional>false</Proportional>
+			<Loop>1</Loop>
+			<Proportional>false</Proportional>
+			<Sound Enable="true" SuspendMusic="true" />
+		</LayoutElement>				
+	</Layout>
+	<Layout Screen="Saver">
+		<LayoutElement Type="ColorShiftBox">
+			<Pos t="0" l="0" w="640" h="480" />
+ 	      		<Modifier Type="Throb" Target="ColorUL">
+			 	<Green Enable="true" Min="0" Max="255" Period="9987" />
+			 	<Red Enable="true" Min="0" Max="255" Period="9234" />
+			 	<Blue Enable="true" Min="0" Max="255" Period="9421" />
+			</Modifier>
+ 	      		<Modifier Type="Throb" Target="ColorLL">
+				<Green Enable="true" Min="0" Max="255" Period="9443" />
+				<Red Enable="true" Min="0" Max="255" Period="9123" />
+			 	<Blue Enable="true" Min="0" Max="255" Period="9356" />
+			</Modifier>
+ 	      		<Modifier Type="Throb" Target="ColorUR">
+				<Green Enable="true" Min="0" Max="255" Period="9286" />
+			 	<Red Enable="true" Min="0" Max="255" Period="9857" />
+			 	<Blue Enable="true" Min="0" Max="255" Period="9423" />
+			</Modifier>
+ 	      		<Modifier Type="Throb" Target="ColorLR">
+			 	<Green Enable="true" Min="0" Max="255" Period="9876" />
+				<Red Enable="true" Min="0" Max="255" Period="9536" />
+			 	<Blue Enable="true" Min="0" Max="255" Period="9445" />
+			</Modifier>
+		</LayoutElement>
+		<xLayoutElement Type="Image" Source="Logo">
+			<Pos l="351" t="143" w="220" h="150" />
+			<Scale x="true" y="true" />
+			<Justify x="center" y="center" />
+			<Proportional>true</Proportional>
+			<Modifier Type="Pulse">
+				<Range x="10" y="10" />
+			</Modifier>
+			<Modifier Type="Bounce">
+				<Bounds l="15" t="10" b="470" r="630" />
+			</Modifier>
+		</xLayoutElement>
+		<LayoutElement Type="MatrixEffect">
+  		 	<Pos t="0" l="0" w="640" h="480" />
+		 	<Color>0xff0000ff</Color>
+ 	      		<Modifier Type="Throb" Target="Color">
+				<Green Enable="true" Min="0" Max="255" Period="6987" />
+				<Red Enable="true" Min="0" Max="255" Period="4123" />
+				<Blue Enable="true" Min="0" Max="255" Period="8345" />
+			</Modifier>
+		</LayoutElement>		
+	</Layout>
+</Skin>
